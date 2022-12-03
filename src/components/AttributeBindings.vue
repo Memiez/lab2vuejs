@@ -1,22 +1,37 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue";
+const message = ref("Hello Kitty");
+const isRed = ref(true);
+const color = ref("green");
+function toggleRed() {
+  isRed.value = !isRed.value;
+} //คลิก เปิดปิดสี
+function toggleColor() {
+  color.value = color.value === "green" ? "blue" : "green";
+} //คลิก เปลี่ยนสี
+</script>
 
 <template>
   <p>
-    <span title="message">
+    <span :title="message">
       Hover your mouse over me for a few seconds to see my dynamically bound
       title!
     </span>
   </p>
 
-  <p class="red">
+  <p :class="{ red: isRed }" @click="toggleRed">
     <span>This should be red... but click me to toggle it.</span>
   </p>
 
-  <p style="color: green">
+  <p :style="{ color }" @click="toggleColor">
     <span>
       This should be green, and should toggle between green and blue on click.
     </span>
   </p>
 </template>
 
-<style scoped></style>
+<style scoped>
+.red {
+  color: red;
+}
+</style>
