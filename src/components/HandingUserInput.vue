@@ -2,7 +2,7 @@
 import { ref } from "vue";
 const message = ref("Hello World!");
 function reverseMessage() {
-  message.value = message.value.split("").reverse().join("");
+  message.value = message.value.split("").reverse().join(""); //กลับซ้ายขวา หน้าหลัง แยกร่าง
 }
 function notify() {
   alert("navigation was prevented");
@@ -16,6 +16,7 @@ function notify() {
   <a href="https://vuejs.org" @click.prevent="notify"
     >A link with e.preventDefault</a
   >
+  <!--prevent ไม่ให้เปิดลิงค์-->
 </template>
 
 <style scoped>
