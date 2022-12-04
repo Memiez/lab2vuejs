@@ -21,4 +21,5 @@ import ConditionsAndLoops from "./components/ConditionsAndLoops.vue";
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>
