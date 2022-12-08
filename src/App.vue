@@ -7,11 +7,15 @@ import HandingUserInput from "./components/HandingUserInput.vue";
 import AttributeBindings from "./components/AttributeBindings.vue";
 import ConditionsAndLoops from "./components/ConditionsAndLoops.vue";
 import FormBindings from "./components/FormBindings.vue";
+import SimpleComponents from "./components/SimpleComponents.vue";
 </script>
 
 <!--เรียกใช้ Component ใน template-->
 <template>
   <div>
+    <SimpleComponents />
+    <br /><br />
+    
     <FormBindings />
     <br />
     <ConditionsAndLoops />
