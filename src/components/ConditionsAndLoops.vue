@@ -18,6 +18,4 @@ const list = ref([1, 2, 3]);
   <p v-else>List is emty.</p>
 </template>
 
-<style>
-
-</style>
+<style></style>

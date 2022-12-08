@@ -3,7 +3,9 @@ import { ref } from "vue";
 const text = ref("Edit Me");
 const checked = ref(true);
 const checkedNames = ref(["Memo"]);
-const picked = ref("One");
+const picked = ref("");
+const selected = ref("A");
+const multiSelected = ref("1");
 </script>
 
 <template>
@@ -30,4 +32,22 @@ const picked = ref("One");
   <input type="radio" id="two" value="Two" v-model="picked" />
   <label for="two">Two </label> <br />
   <span>Picked {{ picked }}</span>
+
+  <h2>Select</h2>
+  <select v-model="selected">
+    <option disabled value="">Please select one.</option>
+    <option value="1">A</option>
+    <option value="2">B</option>
+    <option value="3">C</option>
+  </select>
+  <span>Selected {{ selected }}</span>
+
+  <h2>Multiple Select</h2>
+  <select v-model="multiSelected" multiple style="width: 100px">
+    <option disabled value="">Please select one.</option>
+    <option value="1">A</option>
+    <option value="2">B</option>
+    <option value="3">C</option>
+  </select>
+  <span>Selected {{ multiSelected }}</span>
 </template>
